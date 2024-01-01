@@ -14,6 +14,8 @@ const BookService = () => {
         const name = form.name.value;
         const date = form.date.value;
         const email = user?.email;
+
+        console.log(email)
         const booking = {
             customerName: name, 
             email, 
@@ -26,7 +28,7 @@ const BookService = () => {
 
         console.log(booking);
 
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://car-doctor-server-omega-rouge.vercel.app/bookings', {
             method: 'POST', 
             headers: {
                 'content-type': 'application/json'
